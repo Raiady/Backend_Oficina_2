@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Handjet&display=swap');
+
+*{
+    font-family: 'Handjet', cursive;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+:root{
+    --main-color: #ff401f;
+    --text-color: #fff;
+    --shadon: #e7121c;
+    --bg-color: #121214;
+    --big-font: 5rem;
+    --h2-font: 2.25rem;
+    --p-font: 0.9rem;
+    --border:
+    border-width: 2px,
+    border-style: dashed,
+    border-color: #0F0;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+*::selection {
+    background: rgb(255, 94, 0);
+    color: red;
+}
+
+/* Estilo do corpo */
+body {
+    color: var(--text-color);
+    animation-name: cores;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+/* Animação das cores de fundo */
+@keyframes cores {
+    0% { background: #000000; }
+    25% { background: #1c1d1d; }
+    50% { background: #1C1C1C; }
+    75% { background: #1c1d1d; }
+    100% { background: #000000; }
+}
+
+/* Estilo do cabeçalho */
+.m{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    animation-name: cores;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+/* Estilo do logotipo */
+.logo {
+    animation: go-back 10s infinite alternate;
+}
+@keyframes go-back {
+    from {
+      transform: translateX(50px);
+    }
+    to {
+      transform: translateX(0);
+    }
+ }
+ .m .logo img{
+    height: 6rem;
+}
+
+.m .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+}
+
+.m .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.m .icons div{
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.m .icons div:hover{
+    color:var(--main-color);
+}
+.m .cart-items-container{
+    position: absolute;
+    top:100%; right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding:0 1.5rem;
+}
+
+.m .cart-items-container.active{
+    right: 0;
+}
+
+.m .cart-items-container .cart-item{
+    position: relative;
+    margin:2rem 0;
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+}
+
+.m .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top:1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.m .cart-items-container .cart-item .fa-times:hover{
+    color:var(--main-color);
+}
+
+.m .cart-items-container .cart-item img{
+    height: 7rem;
+}
+
+.m .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color:var(--black);
+    padding-bottom: .5rem;
+}
+
+.m .cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color:var(--main-color);
+}
+
+.m .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+}
+
+
